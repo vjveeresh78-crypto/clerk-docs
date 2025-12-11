@@ -1347,8 +1347,8 @@ This variant also accepts a custom text to be displayed.
 
 ```json {{ filename: 'Status Code: 422' }}
 {
-  "shortMessage": "",
-  "code": "form_password_pwned",
+  "longMessage": "Your password may be compromised. To protect your account, please continue with an alternative sign-in method. You will be required to reset your password after signing in.",
+  "code": "form_password_compromised",
   "meta": {
     "name": "param"
   }
@@ -3314,19 +3314,5 @@ link has expired.
   "shortMessage": "Waitlist not accepting entries",
   "longMessage": "The waitlist is not accepting new entries at this time. Please try again later.",
   "code": "waitlist_not_accepting_entries"
-}
-```
-
-### <code><wbr />Form<wbr />Pwned<wbr />Password</code>
-
-`FormPwnedPassword` signifies an error when the chosen password has been found in the pwned list
-
-```json {{ filename: 'Status Code: 422' }}
-{
-  "longMessage": "Your password may be compromised. To protect your account, please continue with an alternative sign-in method. You will be required to reset your password after signing in.",
-  "code": "form_password_compromised",
-  "meta": {
-    "name": "param"
-  }
 }
 ```
